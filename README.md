@@ -1,22 +1,20 @@
 # Visitor Management System (VMS)
 
 ## Overview
-The **Visitor Management System (VMS)** is a web application built using Flask that allows organizations to manage visitor entries, including details like name, mobile number, purpose of visit, and check-in/check-out times. The system also implements authentication using JWT tokens for secure access control.
+The **Visitor Management System (VMS)** is a web application built using Flask that allows organizations to manage visitor entries, including details like name, mobile number, purpose of visit, and check-in/check-out times. The system also implements authentication for secure access control.
 
 ## Features
 - **User Authentication** (Register, Login, Logout)
-- **Token-based Authentication** using JWT
 - **Multiple Database Support** (User and Visitor data stored separately)
 - **CRUD Operations** for managing visitor records
 - **Photo Upload & Storage**
-- **Private Routing for Secure Access**
 - **Responsive UI with Bootstrap**
 
 ## Tech Stack
 - **Backend**: Flask, Flask-SQLAlchemy, Flask-JWT-Extended
 - **Database**: SQLite
 - **Frontend**: HTML, Bootstrap
-- **Security**: bcrypt (for password hashing), JWT (for authentication)
+- **Security**: bcrypt (for password hashing)
 
 ---
 
@@ -83,22 +81,19 @@ The app will start running on `http://127.0.0.1:8000/`
 
 ---
 
-## Private Routing
+## Authentication
 - The dashboard and visitor management pages are **only accessible if the user is logged in**.
 - If the user tries to access `127.0.0.1:8000/dashboard` without logging in, they are redirected to `/login`.
-- JWT Token is stored in the browser's **local storage** for authentication.
 
 ---
 
 ## Screenshots
 > (Add relevant screenshots of your app UI here)
+> ![snap1](https://github.com/user-attachments/assets/caaa2854-8486-4e05-bf7c-e6261d4d5c25)
+
 
 ---
 
-## License
-This project is licensed under the **MIT License**.
-
----
 
 ## Author
 Developed by **Suraj Gupta**.
