@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="mb-3">
+    <h2>Capture and Upload Photo</h2>
+
+    <!-- Video Feed -->
+    <video id="video" width="300" height="200" autoplay></video>
+
+    <!-- Buttons -->
+    <button type="button" class="btn btn-outline-success" id="captureButton" onclick="startCamera()">Start
+        Camera</button>
+    <button type="button" class="btn btn-outline-success" id="takePhotoButton" onclick="capturePhoto()"
+        disabled>Capture Photo</button>
+    <button type="button" class="btn btn-outline-success" id="retakeButton" onclick="retakePhoto()" disabled>Retake
+        Photo</button>
+
+    <!-- Canvas for Captured Image -->
+    <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+
+    <!-- Display Captured Image -->
+    <div id="capturedImageDiv" style="display:none;">
+        <h3>Captured Image</h3>
+        <img id="capturedImage" src="" alt="Captured Image" width="300px">
+    </div>
+
+    <!-- Form to upload the image -->
+    <form id="photoForm" action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="imageData" id="imageData">
+        <button type="submit" class="btn btn-outline-success my-4" id="uploadBtn" disabled>Upload</button>
+    </form>
+</div>
+
+<script src="/static/js/script.js"></script>
+
+
+{% endblock body %}

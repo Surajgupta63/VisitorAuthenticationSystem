@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block title %} Details {% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+
+    {% if visitor %}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Visitor Name</th>
+                        <td> {{ visitor.visitor_name }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mobile Number</th>
+                        <td> {{ visitor.mobile_number }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td> {{ visitor.email }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Purpose of Visit</th>
+                        <td> {{ visitor.purpose_of_visit }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Host Name</th>
+                        <td> {{ visitor.host_name }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Host Department</th>
+                        <td> {{ visitor.host_dept }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visitor Company  Name</th>
+                        <td> {{ visitor.vis_company_name}} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visitor Company Address</th>
+                        <td> {{ visitor.vis_company_address }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visitor Photo</th>
+                        <td> <img src="\{{ visitor.image_path }}" alt=""> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Check In Time</th>
+                        <td> {{ visitor.check_in_time }} </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Check Out Time</th>
+                        <td> {{ visitor.check_out_time }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    {% else %}
+    <h2>Visitor Details <span><a href="/dashboard" class="btn btn-primary">Dashboard</a></span> </h2>
+    {% if all_visitors|length == 0 %}
+    <div class="alert alert-primary" role="alert">
+        No data Found. Please add visitors details first.
+    </div>
+    {% else %}
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">SNo</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ loop.index }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Visitor Name</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.visitor_name }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Mobile Number</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.mobile_number }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.email }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Purpose of Visit</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.purpose_of_visit }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Host Name</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.host_name }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Host Department</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.host_dept }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Visitor Company Name</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.vis_company_name }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Visitor Company Address</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.vis_company_address }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Visitor Photo</th>
+                    {% for visitor in all_visitors %}
+                    <td> <img src="\{{ visitor.image_path }}" alt=""></td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Check In Time</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.check_in_time }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Check Out Time</th>
+                    {% for visitor in all_visitors %}
+                    <td>{{ visitor.check_out_time }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Actions</th>
+                    {% for visitor in all_visitors %}
+                    <td class="text-nowrap" style="min-width: 200px;">
+                        <a href="/update/{{ visitor.sno }}" class="btn btn-outline-primary btn-sm my-1">Update</a>
+                        <a href="/delete/{{ visitor.sno }}" class="btn btn-outline-danger btn-sm my-1">Delete</a>
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {% endif %}
+</div>
+    {% endif %}
+
+    
+
+
+{% endblock body %}

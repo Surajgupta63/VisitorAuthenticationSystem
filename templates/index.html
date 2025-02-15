@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+    <h2>Add Visitor <span style="font-size: small;">First click the visitor photo then fill the form</span></h2>
+    <form action="/dashboard" method="POST">
+        <div class="mb-3">
+            <label for="visitor_name" class="form-label">Visitor Name</label>
+            <input type="text" class="form-control" name="visitor_name" id="visitor_name" aria-describedby="emailHelp"
+                required>
+        </div>
+        <div class="mb-3">
+            <label for="mobile_number" class="form-label">Mobile No.</label>
+            <input type="number" class="form-control" name="mobile_number" id="mobile_number" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="purpose_of_visit" class="form-label">Purpose of Visit</label>
+            <input type="text" class="form-control" name="purpose_of_visit" id="purpose_of_visit" required>
+        </div>
+        <div class="mb-3">
+            <label for="host_name" class="form-label">Host Name</label>
+            <input type="text" class="form-control" value="None" name="host_name" id="host_name">
+        </div>
+        <div class="mb-3">
+            <label for="host_dept" class="form-label">Host Department</label>
+            <input type="text" class="form-control" value="None" name="host_dept" id="host_dept">
+        </div>
+        <div class="mb-3">
+            <label for="vis_company_name" class="form-label">Visitor Company Name</label>
+            <input type="text" class="form-control" value="None" name="vis_company_name" id="vis_company_name">
+        </div>
+        <div class="mb-3">
+            <label for="vis_company_address" class="form-label">Visitor Company Address</label>
+            <input type="text" class="form-control" name="vis_company_address" id="vis_company_address" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="image_path" value="{{image_url}}" placeholder="Click Photo" required>
+            <span>{{image_url}}</span>
+            <input type="hidden" name="span_value" value="{{image_url}}" id="spanValue" required>
+        </div>
+        <div class="mb-3">
+            <label for="visitor_photo" class="form-label">Visitor Photo</label>
+            <input type="button" class="btn btn-outline-success btn-sm my-1" value="Click Photo" name="visitor_photo"
+                id="visitor_photo" onclick="window.location.href='/photo';" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Visitor</button>
+        <a href="/show_details" class="btn btn-success">Visitors Details</a>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    {% endblock body %}
