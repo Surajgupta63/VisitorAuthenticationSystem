@@ -88,8 +88,14 @@ The app will start running on `http://127.0.0.1:8000/`
 ---
 
 ## Screenshots
-> (Add relevant screenshots of your app UI here)
+> (Screenshots)
 > ![snap1](https://github.com/user-attachments/assets/caaa2854-8486-4e05-bf7c-e6261d4d5c25)
+> ![snap2](https://github.com/user-attachments/assets/8de18b24-4f55-4f18-a389-5c1b43faae6e)
+> ![snap3](https://github.com/user-attachments/assets/a88180e1-7bc0-4cc6-821f-46ba1b4c16a1)
+> ![snap4](https://github.com/user-attachments/assets/1b689ba2-a236-441c-8f8d-0edc0fd5fd2b)
+> ![snap5](https://github.com/user-attachments/assets/547f8ecb-4c94-4871-a6e4-678384a6dda2)
+> ![snap6](https://github.com/user-attachments/assets/ed608fc0-6ce9-4978-97fc-80a99b051b69)
+> ![snap7](https://github.com/user-attachments/assets/38e1c88f-6bc1-4f12-b967-e37984ce62d1)
 
 
 ---
