@@ -104,5 +104,6 @@ The app will start running on `http://127.0.0.1:8000/`
 ## Author
 Developed by **Suraj Gupta**.
 
-[LinkedIn](https://www.linkedin.com/in/guptasurajlpu/) | [GitHub](https://github.com/Surajgupta63/)
+[LinkedIn](https://www.linkedin.com/in/guptasurajlpu/) | [GitHub](https://github.com/Surajgupta63/) | [Gmail](surajgupta689800@gmail.com) 
+
 
