@@ -1,7 +1,7 @@
-# Visitor Authentication System (VMS)
+# Visitor Authentication System (VAS)
 
 ## Overview
-The **Visitor Management System (VMS)** is a web application built using Flask that allows organizations to manage visitor entries, including details like name, mobile number, purpose of visit, and check-in/check-out times. The system also implements authentication for secure access control.
+The **Visitor Authentication System (VAS)** is a web application built using Flask that allows organizations to manage visitor entries, including details like name, mobile number, purpose of visit, and check-in/check-out times. The system also implements authentication for secure access control.
 
 ## Features
 - **User Authentication** (Register, Login, Logout)
